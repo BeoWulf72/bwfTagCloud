@@ -1,0 +1,18 @@
+
+<?php
+if(count($this->tags) > 0) :
+    ?>
+<div id="tags">
+    <?php
+    foreach($this->tags as $item) {
+        print 
+            '<a href="' . $this->basePath('/tags/') . $item['id'] .
+             '" style="font-size:' . (20 + $item['total']) . 'px;">' .
+             $item['tag'] . '</a> ';
+    }
+    ?>
+   
+</div>
+
+<?php endif;
+?>
